@@ -1,0 +1,26 @@
+{
+  "name": "docker-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf node_modules",
+    "dev": "run-p _tw _serve",
+    "docker-build": "docker build -t docker-demo .",
+    "docker-run": "docker run --name docker-demo -d -p 3000:80 docker-demo",
+    "format": "prettier --write README.md 'src/**/*.{html,css,js,json,md}'",
+    "start": "run-p _serve",
+    "_serve": "serve src",
+    "_tw": "tailwindcss -i ./src/globals.css -o ./src/output.css --watch"
+  },
+  "keywords": [],
+  "author": "Naresh Bhatia",
+  "license": "MIT",
+  "devDependencies": {
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "serve": "^14.2.1",
+    "tailwindcss": "^3.4.3"
+  }
+}
