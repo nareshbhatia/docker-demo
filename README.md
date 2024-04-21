@@ -28,7 +28,7 @@ npm start
 
 Open a browser window at http://localhost:3000/ to see the site.
 
-### Running with docker
+### Running with Docker
 
 First build a docker image (see `Dockerfile` to understand how the image is
 built):
@@ -45,4 +45,18 @@ npm run docker-run
 
 Open a browser window at http://localhost:3000/ to see the site.
 
-Use Docker Desktop to stop and delete the `docker-demo` container.
+Use Docker Desktop to stop and delete the `docker-demo` container and the
+associated image.
+
+### Running with Docker Compose
+
+```shell
+docker compose up
+```
+
+Open a browser window at http://localhost:3000/ to see the site.
+
+Hit control-c to stop docker compose and the `docker-demo` container.
+
+Use Docker Desktop to delete the `docker-demo` container and the associated
+image.
