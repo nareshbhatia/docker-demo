@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --font-inter: Inter;
+@layer base {
+  :root {
+    /* ----- Colors ----- */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --border: 240 5.9% 90%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+
+    /* ----- Typography: Font Family ----- */
+    --font-inter: Inter;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground min-h-screen font-sans antialiased;
+  }
 }
