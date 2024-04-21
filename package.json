@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "clean": "rimraf node_modules",
+    "clean": "rimraf node_modules src/output.css",
     "dev": "run-p _tw _serve",
     "docker-build": "docker build -t docker-demo .",
     "docker-run": "docker run --name docker-demo -d -p 3000:80 docker-demo",
